@@ -27,9 +27,7 @@ public class Express {
     public void backTrace (int t){  
         if (t > n){ //当t>n时,算法搜索到叶节点，得到一个新的n皇后互不攻击放置方案，方案数加1  
             sum ++ ;    //方案数自增1  
-            System.out.println ("方案" + (h++) + "");  
             show(x);  
-            System.out.print ("/n----------------/n");//华丽的分割线  
         }else { //当t<=n时，当前扩展的结点Z是解空间中的内部结点，该节点有x[i]=1,2，…,n共n个子结点，  
                 //对于当前扩展结点Z的每一个儿子结点，由place()方法检测其可行性，  
                 //并以深度优先的方式递归地对可行子树搜索，或剪去不可行子数  
@@ -42,14 +40,9 @@ public class Express {
         }  
     }  
       
-    public void print (int[] a){    //打印数组，没啥的  
-        for (int i = 1 ; i < a.length ; i++){  
-            System.out.print ("皇后" + i + "在" + i + "行" +a[i] + "列、");  
-        }  
-    }  
-    
     public void show( int [] a)  { 
     	System.out.println();
+    	System.out.println ("方案" + (h++) + "");  
     	for(int i = 1; i< a.length; i++) { 
     		for(int j = 1; j< a.length; j++)  { 
     			if(a[i] != j) { 
@@ -59,26 +52,12 @@ public class Express {
     			}
     		} System.out.println();
     	}
+    	System.out.print ("/n----------------/n");
     }
       
     public static void main (String[] args){  
         Express em = new Express();  
-        em.backTrace(1);    //从1开始回溯  
+        em.backTrace(1);    //从1col开始回溯  
         System.out.println ("/n详细方案如上所示，"+"可行个数为:" + em.sum);  
     }  
 }
-
-/*output:八皇后问题只有92种方案，这里只给出其中的三个方案 
-方案1 
-皇后1在1行1列、皇后2在2行5列、皇后3在3行8列、皇后4在4行6列、皇后5在5行3列、皇后6在6行7列、皇后7在7行2列、皇后8在8行4列、 
----------------- 
-方案2 
-皇后1在1行1列、皇后2在2行6列、皇后3在3行8列、皇后4在4行3列、皇后5在5行7列、皇后6在6行4列、皇后7在7行2列、皇后8在8行5列、 
----------------- 
-        . 
-        . 
-        . 
-方案92 
-皇后1在1行8列、皇后2在2行4列、皇后3在3行1列、皇后4在4行3列、皇后5在5行6列、皇后6在6行2列、皇后7在7行7列、皇后8在8行5列、 
----------------- 
-*///~  
