@@ -70,6 +70,7 @@ public class ImageUtil {
             g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP, alpha));
             // 第一参数->设置的内容，后面两个参数->文字在图片上的坐标位置(x,y) .
             g.drawString(logoText, width, height);
+            g.drawString(logoText, 200, 200);
             g.dispose();
             os = new FileOutputStream(targerPath);
             // 生成图片
