@@ -1,8 +1,11 @@
 
 public class Test {
 	public static void main(String[] args) {
-		System.out.println("hello");
-		System.out.println(Long.MAX_VALUE);
-		System.out.println(Integer.MAX_VALUE);
+		String wstest = " wstest";
+        byte[] rs = wstest.getBytes();
+
+        for (byte b : rs) {
+            System.out.println(b + " " + (char)b);
+        }
 	}
 }

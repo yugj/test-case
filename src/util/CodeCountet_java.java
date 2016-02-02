@@ -11,7 +11,7 @@ public class CodeCountet_java {
 	static long whiteLines = 0;
 	
 	public static void main(String[] args) {
-		new CodeCountet_java().dirCount(new File("F:\\src\\modbus4j-master\\modbus4j-master\\Modbus4J"));
+		new CodeCountet_java().dirCount(new File("E:\\project\\wskd-boss\\boss-server\\src\\main"));
 		System.out.println("normalLines:" + normalLines);
 		System.out.println("commentLines:" + commentLines);
 		System.out.println("whiteLines:" + whiteLines);
