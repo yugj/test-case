@@ -2,6 +2,10 @@ package test.str;
 
 import java.io.UnsupportedEncodingException;
 
+
+/**
+ * ascii
+ */
 public class AsciiStringConv {
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		t1();// ASCII×ª»»Îª×Ö·û´®
